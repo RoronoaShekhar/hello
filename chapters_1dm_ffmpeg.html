@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lecture Chapters → 1DM/FFmpeg Copier</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --panel: #12161c;
+    --muted: #9aa4b2;
+    --text: #e6edf3;
+    --brand: #67e8f9;
+    --brand-2: #a78bfa;
+    --ring: rgba(103, 232, 249, 0.35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: radial-gradient(1200px 600px at 10% -10%, #111827 20%, transparent 50%), var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 28px 20px 10px;
+    position: sticky; top: 0; backdrop-filter: blur(8px);
+    background: linear-gradient(180deg, rgba(11,13,16,0.85), rgba(11,13,16,0.65) 60%, transparent);
+    z-index: 10;
+  }
+  h1 { margin: 0 0 10px; font-size: clamp(24px, 3vw, 34px); letter-spacing: .5px; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .toolbar {
+    display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; margin-top: 14px;
+  }
+  input[type="search"] {
+    width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid #1f2937;
+    background: #0f1318; color: var(--text); outline: none;
+    box-shadow: 0 0 0 0px var(--ring);
+  }
+  input[type="search"]:focus { box-shadow: 0 0 0 4px var(--ring); border-color: #334155; }
+  .pill {
+    border: 1px solid #273244; border-radius: 999px; padding: 8px 12px; font-size: 12px; color: var(--muted);
+  }
+  main { padding: 22px; max-width: 1200px; margin: 0 auto; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
+  }
+  .card {
+    background: linear-gradient(180deg, #0d1218, #0b0f15);
+    border: 1px solid #1f2937; border-radius: 16px; padding: 16px; cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover { transform: translateY(-2px); border-color: #334155; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .card h3 { margin: 2px 0 8px; font-size: 17px; line-height: 1.2; }
+  .meta { font-size: 12px; color: var(--muted); display:flex; gap:8px; align-items:center; }
+  .k { padding: 2px 8px; border: 1px solid #2a3446; border-radius: 999px; font-size: 11px; color: #9fb3c8; }
+  /* Modal */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.5);
+    display: none; align-items: center; justify-content: center; z-index: 50;
+  }
+  .modal {
+    width: min(980px, 92vw); background: #0b0f15; border:1px solid #223046; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.6);
+  }
+  .modal header { display:flex; align-items:center; justify-content: space-between; padding: 14px 16px; background:#0f131a; border-bottom:1px solid #223046; }
+  .modal h2 { margin: 0; font-size: 18px; }
+  .close { appearance:none; background:none; border:0; color:#94a3b8; font-size: 22px; cursor:pointer; }
+  .tabs { display:flex; gap:8px; padding: 10px 12px; border-bottom:1px solid #1f2c42; background:#0f131a; }
+  .tab-btn { padding:8px 10px; border:1px solid #253247; border-radius:10px; background:#0a0e14; color:#a6b6ca; cursor:pointer; font-size:12px; }
+  .tab-btn.active { color:white; border-color:#425371; box-shadow: 0 0 0 3px rgba(66,83,113,.35) inset; }
+  .modal main { padding: 14px 16px 18px; }
+  .actions { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
+  .btn {
+    padding: 10px 12px; border-radius: 12px; border:1px solid #2b3b53; background: linear-gradient(180deg,#0e1420,#0d1320);
+    color: #d1e0ee; cursor: pointer; font-size: 13px;
+  }
+  .btn:hover { border-color:#3a4d6b; }
+  textarea {
+    width: 100%; height: 280px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px;
+    color: #dbeafe; background:#0a0f15; border:1px solid #203047; border-radius: 12px; padding: 12px; white-space: pre; overflow: auto;
+  }
+  .hint { color: #93a3b7; font-size: 12px; margin-top: 8px; line-height: 1.4; }
+  .count { font-weight: 600; color: var(--brand); }
+  .footer-note { padding: 18px 22px; color:#9fb3c8; font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Lecture Chapters → 1DM/FFmpeg Copier</h1>
+  <div class="sub">Paste-ready 1DM lines and FFmpeg commands generated from your dataset. Click a chapter to copy all links for that chapter.</div>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search chapters…" autocomplete="off" />
+    <div class="pill"><span id="stats"></span></div>
+  </div>
+</header>
+<main>
+  <div id="grid" class="grid"></div>
+</main>
+
+<div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal">
+    <header>
+      <h2 id="modalTitle">Chapter</h2>
+      <button class="close" id="closeBtn" title="Close">&times;</button>
+    </header>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="idm">1DM (URL | filename)</button>
+      <button class="tab-btn" data-tab="idm-tab">1DM (tab-separated)</button>
+      <button class="tab-btn" data-tab="ffmpeg-win">FFmpeg (Windows .bat)</button>
+      <button class="tab-btn" data-tab="ffmpeg-bash">FFmpeg (bash)</button>
+      <button class="tab-btn" data-tab="urls">Raw URLs</button>
+    </div>
+    <main>
+      <div class="actions">
+        <button class="btn" id="copyBtn">Copy current</button>
+        <button class="btn" id="downloadBtn">Download .txt</button>
+      </div>
+      <textarea id="out" readonly></textarea>
+      <div class="hint">
+        Tip for 1DM: Use <b>Import > Clipboard</b>. If filenames are not respected, enable the setting that parses the filename after the <code>|</code> (or try the tab-separated format).
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="footer-note">
+  <b>How filenames are built:</b> <span class="muted">NN – Title.mp4</span>. Unsafe characters are replaced. Ordering uses explicit numbers when present; otherwise it follows appearance order per chapter.
+</div>
+
+<script>
+  const DATA = [];
+
+  const elGrid = document.getElementById('grid');
+  const elQ = document.getElementById('q');
+  const elStats = document.getElementById('stats');
+
+  function $(sel, root=document) { return root.querySelector(sel); }
+  function $all(sel, root=document) { return Array.from(root.querySelectorAll(sel)); }
+
+  function renderGrid(filter="") {
+    elGrid.innerHTML = "";
+    const q = (filter || "").toLowerCase().trim();
+    let shown = 0, total = 0;
+    for (const chap of DATA) {
+      total++;
+      if (q && !chap.chapter.toLowerCase().includes(q)) continue;
+      shown++;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h3>${chap.chapter}</h3>
+        <div class="meta">
+          <span class="k">Videos: <span class="count">${chap.count}</span></span>
+        </div>
+      `;
+      card.addEventListener('click', () => openModal(chap));
+      elGrid.appendChild(card);
+    }
+    elStats.textContent = `${shown}/${total} chapters`;
+  }
+
+  // Modal logic
+  const overlay = document.getElementById('overlay');
+  const out = document.getElementById('out');
+  const copyBtn = document.getElementById('copyBtn');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  let activeTab = "idm";
+  let currentChap = null;
+
+  function openModal(chap) {
+    currentChap = chap;
+    $('#modalTitle').textContent = chap.chapter + " (" + chap.count + ")";
+    setTab(activeTab); // refresh with current tab
+    overlay.style.display = "flex";
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+  function closeModal() {
+    overlay.style.display = "none";
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  function linesFor(chap, kind) {
+    const arr = [];
+    const pad = chap.pad || 2;
+    if (kind === "idm") {
+      for (const it of chap.items) {
+        arr.push(`${it.m3u8} | ${it.filename}`);
+      }
+      return arr.join("\n");
+    }
+    if (kind === "idm-tab") {
+      for (const it of chap.items) {
+        arr.push(`${it.m3u8}\t${it.filename}`);
+      }
+      return arr.join("\n");
+    }
+    if (kind === "urls") {
+      return chap.items.map(it => it.m3u8).join("\n");
+    }
+    if (kind === "ffmpeg-win") {
+      const cmds = [];
+      cmds.push("@echo off");
+      cmds.push("setlocal enabledelayedexpansion");
+      for (const it of chap.items) {
+        cmds.push(`ffmpeg -y -i "${it.m3u8}" -c copy "${it.filename}"`);
+      }
+      return cmds.join("\r\n");
+    }
+    if (kind === "ffmpeg-bash") {
+      const cmds = [];
+      cmds.push("#!/usr/bin/env bash");
+      cmds.push("set -euo pipefail");
+      for (const it of chap.items) {
+        cmds.push(`ffmpeg -y -i "${it.m3u8}" -c copy "${it.filename}"`);
+      }
+      return cmds.join("\n");
+    }
+    return "";
+  }
+
+  function setTab(kind) {
+    activeTab = kind;
+    $all('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === kind));
+    if (currentChap) out.value = linesFor(currentChap, kind);
+  }
+
+  $all('.tab-btn').forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+
+  copyBtn.addEventListener('click', async () => {
+    out.select();
+    try {
+      await navigator.clipboard.writeText(out.value);
+      copyBtn.textContent = "Copied ✓";
+      setTimeout(() => copyBtn.textContent = "Copy current", 1200);
+    } catch (e) {
+      // Fallback
+      document.execCommand('copy');
+    }
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    const blob = new Blob([out.value], {type: "text/plain"});
+    const a = document.createElement('a');
+    const ext = activeTab.startsWith('ffmpeg') ? (activeTab === 'ffmpeg-win' ? '.bat' : '.sh') : '.txt';
+    a.href = URL.createObjectURL(blob);
+    a.download = (currentChap ? currentChap.chapter.replace(/[^a-z0-9\-\s\._]/gi, "-") : "links") + ext;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+
+  elQ.addEventListener('input', (e) => renderGrid(e.target.value));
+
+  // Boot
+  renderGrid("");
+</script>
+</body>
+</html>
