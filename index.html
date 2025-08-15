@@ -1,170 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter Downloader</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        button { margin: 5px; padding: 10px 15px; cursor: pointer; }
-        .modal {
-            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
-            width: 100%; height: 100%; background: rgba(0,0,0,0.5);
-            justify-content: center; align-items: center;
-        }
-        .modal-content {
-            background: white; padding: 20px; border-radius: 8px;
-            max-width: 600px; width: 90%;
-        }
-        textarea {
-            width: 100%; height: 200px; font-family: monospace;
-        }
-        .close-btn {
-            float: right; cursor: pointer; font-size: 18px;
-        }
-    </style>
+<title>Lecture Chapters</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+button { padding: 10px 20px; margin: 5px; }
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+.modal-content { background: white; margin: 10% auto; padding: 20px; width: 80%; max-width: 600px; }
+.close { float: right; cursor: pointer; font-size: 20px; }
+textarea { width: 100%; height: 200px; }
+</style>
 </head>
 <body>
-<h1>Chapters</h1>
-<button onclick="document.getElementById('modal_1').style.display='flex'">Power Sharing - Lecture 2.mp4</button>
+<h1>Lecture Chapters</h1>
 
-<div class="modal" id="modal_1">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_1').style.display='none'">&times;</span>
-        <h2>Power Sharing - Lecture 2.mp4</h2>
-        <textarea id="textarea_1" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17129837278112649384/index_3.m3u8  Power Sharing - Lecture 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_1')">Copy</button>
-    </div>
+<button onclick="document.getElementById('modal_1').style.display='block'">Power Sharing</button>
+<div id="modal_1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_1').style.display='none'">&times;</span>
+    <h2>Power Sharing</h2>
+    <textarea id="textarea_1" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17129837278112649384/index_3.m3u8  Power Sharing - Lecture 2.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_1')">Copy</button>
+  </div>
 </div>
-<button onclick="document.getElementById('modal_2').style.display='flex'">Power Sharing Lecture - 3.mp4</button>
 
-<div class="modal" id="modal_2">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_2').style.display='none'">&times;</span>
-        <h2>Power Sharing Lecture - 3.mp4</h2>
-        <textarea id="textarea_2" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17130287982364649384/index_3.m3u8  Power Sharing Lecture - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_2')">Copy</button>
-    </div>
+<button onclick="document.getElementById('modal_2').style.display='block'">Power Sharing Lecture</button>
+<div id="modal_2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_2').style.display='none'">&times;</span>
+    <h2>Power Sharing Lecture</h2>
+    <textarea id="textarea_2" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17130287982364649384/index_3.m3u8  Power Sharing Lecture - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17131111451407649384/index_3.m3u8  Power Sharing Lecture - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_2')">Copy</button>
+  </div>
 </div>
-<button onclick="document.getElementById('modal_3').style.display='flex'">Power Sharing Lecture - 4.mp4</button>
 
-<div class="modal" id="modal_3">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_3').style.display='none'">&times;</span>
-        <h2>Power Sharing Lecture - 4.mp4</h2>
-        <textarea id="textarea_3" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17131111451407649384/index_3.m3u8  Power Sharing Lecture - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_3')">Copy</button>
-    </div>
+<button onclick="document.getElementById('modal_3').style.display='block'">Doubt Solving Session.mp4</button>
+<div id="modal_3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_3').style.display='none'">&times;</span>
+    <h2>Doubt Solving Session.mp4</h2>
+    <textarea id="textarea_3" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17131869363705649384/index_3.m3u8  Doubt Solving Session.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17141369546279649384/index_3.m3u8  Doubt Solving Session.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_3')">Copy</button>
+  </div>
 </div>
-<button onclick="document.getElementById('modal_4').style.display='flex'">Doubt Solving Session.mp4</button>
 
-<div class="modal" id="modal_4">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_4').style.display='none'">&times;</span>
-        <h2>Doubt Solving Session.mp4</h2>
-        <textarea id="textarea_4" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17131869363705649384/index_3.m3u8  Doubt Solving Session.mp4
-https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17141369546279649384/index_3.m3u8  Doubt Solving Session.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_4')">Copy</button>
-    </div>
+<button onclick="document.getElementById('modal_4').style.display='block'">Resources and Development</button>
+<div id="modal_4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_4').style.display='none'">&times;</span>
+    <h2>Resources and Development</h2>
+    <textarea id="textarea_4" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17135881738965649384/index_3.m3u8  Resources and Development - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17136288349335649384/index_3.m3u8  Resources and Development - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17137141925506649384/index_3.m3u8  Resources and Development - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17137919172655649384/index_3.m3u8  Resources and Development - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17142336228201649384/index_3.m3u8  Resources and Development - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17143186281180649384/index_3.m3u8  Resources and Development - 6.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_4')">Copy</button>
+  </div>
 </div>
-<button onclick="document.getElementById('modal_5').style.display='flex'">Resources and Development - 1.mp4</button>
 
-<div class="modal" id="modal_5">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_5').style.display='none'">&times;</span>
-        <h2>Resources and Development - 1.mp4</h2>
-        <textarea id="textarea_5" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17135881738965649384/index_3.m3u8  Resources and Development - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_5')">Copy</button>
-    </div>
+<button onclick="document.getElementById('modal_5').style.display='block'">The Rise Of Nationalism In Europe</button>
+<div id="modal_5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_5').style.display='none'">&times;</span>
+    <h2>The Rise Of Nationalism In Europe</h2>
+    <textarea id="textarea_5" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17144056412321649384/index_3.m3u8  The Rise Of Nationalism In Europe - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17147425907230649384/index_3.m3u8  The Rise Of Nationalism In Europe - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17150011565016649384/index_3.m3u8  The Rise Of Nationalism In Europe - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_5')">Copy</button>
+  </div>
 </div>
-<button onclick="document.getElementById('modal_6').style.display='flex'">Resources and Development - 2.mp4</button>
 
-<div class="modal" id="modal_6">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_6').style.display='none'">&times;</span>
-        <h2>Resources and Development - 2.mp4</h2>
-        <textarea id="textarea_6" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17136288349335649384/index_3.m3u8  Resources and Development - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_6')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_7').style.display='flex'">Resources and Development - 3.mp4</button>
-
-<div class="modal" id="modal_7">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_7').style.display='none'">&times;</span>
-        <h2>Resources and Development - 3.mp4</h2>
-        <textarea id="textarea_7" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17137141925506649384/index_3.m3u8  Resources and Development - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_7')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_8').style.display='flex'">Resources and Development - 4.mp4</button>
-
-<div class="modal" id="modal_8">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_8').style.display='none'">&times;</span>
-        <h2>Resources and Development - 4.mp4</h2>
-        <textarea id="textarea_8" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17137919172655649384/index_3.m3u8  Resources and Development - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_8')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_9').style.display='flex'">Resources and Development - 5.mp4</button>
-
-<div class="modal" id="modal_9">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_9').style.display='none'">&times;</span>
-        <h2>Resources and Development - 5.mp4</h2>
-        <textarea id="textarea_9" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17142336228201649384/index_3.m3u8  Resources and Development - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_9')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_10').style.display='flex'">Resources and Development - 6.mp4</button>
-
-<div class="modal" id="modal_10">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_10').style.display='none'">&times;</span>
-        <h2>Resources and Development - 6.mp4</h2>
-        <textarea id="textarea_10" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17143186281180649384/index_3.m3u8  Resources and Development - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_10')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_11').style.display='flex'">The Rise Of Nationalism In Europe - 1.mp4</button>
-
-<div class="modal" id="modal_11">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_11').style.display='none'">&times;</span>
-        <h2>The Rise Of Nationalism In Europe - 1.mp4</h2>
-        <textarea id="textarea_11" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17144056412321649384/index_3.m3u8  The Rise Of Nationalism In Europe - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_11')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_12').style.display='flex'">The Rise Of Nationalism In Europe - 2.mp4</button>
-
-<div class="modal" id="modal_12">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_12').style.display='none'">&times;</span>
-        <h2>The Rise Of Nationalism In Europe - 2.mp4</h2>
-        <textarea id="textarea_12" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17147425907230649384/index_3.m3u8  The Rise Of Nationalism In Europe - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_12')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_13').style.display='flex'">Doubt Solving Class.mp4</button>
-
-<div class="modal" id="modal_13">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_13').style.display='none'">&times;</span>
-        <h2>Doubt Solving Class.mp4</h2>
-        <textarea id="textarea_13" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17148369667130649384/index_3.m3u8  Doubt Solving Class.mp4
+<button onclick="document.getElementById('modal_6').style.display='block'">Doubt Solving Class.mp4</button>
+<div id="modal_6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_6').style.display='none'">&times;</span>
+    <h2>Doubt Solving Class.mp4</h2>
+    <textarea id="textarea_6" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17148369667130649384/index_3.m3u8  Doubt Solving Class.mp4
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17156056224746649384/index_3.m3u8  Doubt Solving Class.mp4
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17165565215854649384/index_3.m3u8  Doubt Solving Class.mp4
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17195890452952649384/index_3.m3u8  Doubt Solving Class.mp4
@@ -177,989 +91,349 @@ https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hl
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17257250229492649384/index_3.m3u8  Doubt Solving Class.mp4
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17268391297807649384/index_3.m3u8  Doubt Solving Class.mp4
 https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172865200380601815381/index_3.m3u8  Doubt Solving Class.mp4
-https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173107155697101815381/index_3.m3u8  Doubt Solving Class.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_13')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_14').style.display='flex'">The Rise Of Nationalism In Europe - 4.mp4</button>
-
-<div class="modal" id="modal_14">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_14').style.display='none'">&times;</span>
-        <h2>The Rise Of Nationalism In Europe - 4.mp4</h2>
-        <textarea id="textarea_14" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17150011565016649384/index_3.m3u8  The Rise Of Nationalism In Europe - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_14')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_15').style.display='flex'">The Rise of Nationalism in Europe - 5.mp4</button>
-
-<div class="modal" id="modal_15">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_15').style.display='none'">&times;</span>
-        <h2>The Rise of Nationalism in Europe - 5.mp4</h2>
-        <textarea id="textarea_15" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17153595915108649384/index_3.m3u8  The Rise of Nationalism in Europe - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_15')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_16').style.display='flex'">The Rise of Nationalism in Europe - 6.mp4</button>
-
-<div class="modal" id="modal_16">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_16').style.display='none'">&times;</span>
-        <h2>The Rise of Nationalism in Europe - 6.mp4</h2>
-        <textarea id="textarea_16" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17154424674251649384/index_3.m3u8  The Rise of Nationalism in Europe - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_16')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_17').style.display='flex'">The Rise of Nationalism in Europe - 7.mp4</button>
-
-<div class="modal" id="modal_17">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_17').style.display='none'">&times;</span>
-        <h2>The Rise of Nationalism in Europe - 7.mp4</h2>
-        <textarea id="textarea_17" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17155275125960649384/index_3.m3u8  The Rise of Nationalism in Europe - 7.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_17')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_18').style.display='flex'">The Nationalism in Europe - 8.mp4</button>
-
-<div class="modal" id="modal_18">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_18').style.display='none'">&times;</span>
-        <h2>The Nationalism in Europe - 8.mp4</h2>
-        <textarea id="textarea_18" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17160380281113649384/index_3.m3u8  The Nationalism in Europe - 8.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_18')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_19').style.display='flex'">The Rise of Nationalism In Europe - 9.mp4</button>
-
-<div class="modal" id="modal_19">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_19').style.display='none'">&times;</span>
-        <h2>The Rise of Nationalism In Europe - 9.mp4</h2>
-        <textarea id="textarea_19" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17161334644454649384/index_3.m3u8  The Rise of Nationalism In Europe - 9.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_19')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_20').style.display='flex'">The Rise of Nationalism In Europe - 10.mp4</button>
-
-<div class="modal" id="modal_20">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_20').style.display='none'">&times;</span>
-        <h2>The Rise of Nationalism In Europe - 10.mp4</h2>
-        <textarea id="textarea_20" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17162108314730649384/index_3.m3u8  The Rise of Nationalism In Europe - 10.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_20')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_21').style.display='flex'">Development - 1.mp4</button>
-
-<div class="modal" id="modal_21">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_21').style.display='none'">&times;</span>
-        <h2>Development - 1.mp4</h2>
-        <textarea id="textarea_21" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17166516995920649384/index_3.m3u8  Development - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_21')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_22').style.display='flex'">Development - 2.mp4</button>
-
-<div class="modal" id="modal_22">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_22').style.display='none'">&times;</span>
-        <h2>Development - 2.mp4</h2>
-        <textarea id="textarea_22" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17167382266300649384/index_3.m3u8  Development - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_22')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_23').style.display='flex'">Development - 3.mp4</button>
-
-<div class="modal" id="modal_23">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_23').style.display='none'">&times;</span>
-        <h2>Development - 3.mp4</h2>
-        <textarea id="textarea_23" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17168153633966649384/index_3.m3u8  Development - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_23')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_24').style.display='flex'">Development - 4.mp4</button>
-
-<div class="modal" id="modal_24">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_24').style.display='none'">&times;</span>
-        <h2>Development - 4.mp4</h2>
-        <textarea id="textarea_24" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17180340074292649384/index_3.m3u8  Development - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_24')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_25').style.display='flex'">Federalism - 1.mp4</button>
-
-<div class="modal" id="modal_25">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_25').style.display='none'">&times;</span>
-        <h2>Federalism - 1.mp4</h2>
-        <textarea id="textarea_25" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17180340074292649384/index_3.m3u8  Federalism - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_25')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_26').style.display='flex'">Federalism - 2.mp4</button>
-
-<div class="modal" id="modal_26">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_26').style.display='none'">&times;</span>
-        <h2>Federalism - 2.mp4</h2>
-        <textarea id="textarea_26" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17181211522469649384/index_3.m3u8  Federalism - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_26')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_27').style.display='flex'">Federalism - 3.mp4</button>
-
-<div class="modal" id="modal_27">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_27').style.display='none'">&times;</span>
-        <h2>Federalism - 3.mp4</h2>
-        <textarea id="textarea_27" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17182064999480649384/index_3.m3u8  Federalism - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_27')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_28').style.display='flex'">Federalism - 4.mp4</button>
-
-<div class="modal" id="modal_28">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_28').style.display='none'">&times;</span>
-        <h2>Federalism - 4.mp4</h2>
-        <textarea id="textarea_28" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17182936795463649384/index_3.m3u8  Federalism - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_28')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_29').style.display='flex'">SST doubt solving class.mp4</button>
-
-<div class="modal" id="modal_29">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_29').style.display='none'">&times;</span>
-        <h2>SST doubt solving class.mp4</h2>
-        <textarea id="textarea_29" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17186293167106649384/index_3.m3u8  SST doubt solving class.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_29')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_30').style.display='flex'">Federalism - 5.mp4</button>
-
-<div class="modal" id="modal_30">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_30').style.display='none'">&times;</span>
-        <h2>Federalism - 5.mp4</h2>
-        <textarea id="textarea_30" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17189759349261649384/index_3.m3u8  Federalism - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_30')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_31').style.display='flex'">Forest and Wildlife Resources - 1.mp4</button>
-
-<div class="modal" id="modal_31">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_31').style.display='none'">&times;</span>
-        <h2>Forest and Wildlife Resources - 1.mp4</h2>
-        <textarea id="textarea_31" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17191570875588649384/index_3.m3u8  Forest and Wildlife Resources - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_31')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_32').style.display='flex'">Forest and Wildlife Resources - 2.mp4</button>
-
-<div class="modal" id="modal_32">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_32').style.display='none'">&times;</span>
-        <h2>Forest and Wildlife Resources - 2.mp4</h2>
-        <textarea id="textarea_32" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17192342518384649384/index_3.m3u8  Forest and Wildlife Resources - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_32')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_33').style.display='flex'">Forest and Wildlife Resources - 3.mp4</button>
-
-<div class="modal" id="modal_33">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_33').style.display='none'">&times;</span>
-        <h2>Forest and Wildlife Resources - 3.mp4</h2>
-        <textarea id="textarea_33" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17192436195662649384/index_3.m3u8  Forest and Wildlife Resources - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_33')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_34').style.display='flex'">Nationalism in India - 1.mp4</button>
-
-<div class="modal" id="modal_34">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_34').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 1.mp4</h2>
-        <textarea id="textarea_34" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17196665905631649384/index_3.m3u8  Nationalism in India - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_34')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_35').style.display='flex'">Nationalism in India - 2.mp4</button>
-
-<div class="modal" id="modal_35">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_35').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 2.mp4</h2>
-        <textarea id="textarea_35" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17199257035351649384/index_3.m3u8  Nationalism in India - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_35')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_36').style.display='flex'">Nationalism in India - 3.mp4</button>
-
-<div class="modal" id="modal_36">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_36').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 3.mp4</h2>
-        <textarea id="textarea_36" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17200219498358649384/index_3.m3u8  Nationalism in India - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_36')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_37').style.display='flex'">Nationalism in India - 4.mp4</button>
-
-<div class="modal" id="modal_37">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_37').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 4.mp4</h2>
-        <textarea id="textarea_37" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17203670994343649384/index_3.m3u8  Nationalism in India - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_37')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_38').style.display='flex'">Nationalism in India - 5.mp4</button>
-
-<div class="modal" id="modal_38">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_38').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 5.mp4</h2>
-        <textarea id="textarea_38" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17207896504953649384/index_3.m3u8  Nationalism in India - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_38')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_39').style.display='flex'">Nationalism in India - 6.mp4</button>
-
-<div class="modal" id="modal_39">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_39').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 6.mp4</h2>
-        <textarea id="textarea_39" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17208759348052649384/index_3.m3u8  Nationalism in India - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_39')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_40').style.display='flex'">Nationalism in India - 7.mp4</button>
-
-<div class="modal" id="modal_40">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_40').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 7.mp4</h2>
-        <textarea id="textarea_40" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17209632394366649384/index_3.m3u8  Nationalism in India - 7.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_40')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_41').style.display='flex'">Nationalism in India - 8.mp4</button>
-
-<div class="modal" id="modal_41">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_41').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 8.mp4</h2>
-        <textarea id="textarea_41" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17210578113221649384/index_3.m3u8  Nationalism in India - 8.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_41')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_42').style.display='flex'">Nationalism in India - 9.mp4</button>
-
-<div class="modal" id="modal_42">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_42').style.display='none'">&times;</span>
-        <h2>Nationalism in India - 9.mp4</h2>
-        <textarea id="textarea_42" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17214899422201649384/index_3.m3u8  Nationalism in India - 9.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_42')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_43').style.display='flex'">Nationalism in India -10.mp4</button>
-
-<div class="modal" id="modal_43">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_43').style.display='none'">&times;</span>
-        <h2>Nationalism in India -10.mp4</h2>
-        <textarea id="textarea_43" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17215762347214649384/index_3.m3u8  Nationalism in India -10.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_43')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_44').style.display='flex'">Nationalism in India -11.mp4</button>
-
-<div class="modal" id="modal_44">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_44').style.display='none'">&times;</span>
-        <h2>Nationalism in India -11.mp4</h2>
-        <textarea id="textarea_44" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17216543628282649384/index_3.m3u8  Nationalism in India -11.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_44')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_45').style.display='flex'">Sectors of Indian Economy -1.mp4</button>
-
-<div class="modal" id="modal_45">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_45').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy -1.mp4</h2>
-        <textarea id="textarea_45" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17219994483478649384/index_3.m3u8  Sectors of Indian Economy -1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_45')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_46').style.display='flex'">Sectors of Indian Economy - 2.mp4</button>
-
-<div class="modal" id="modal_46">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_46').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 2.mp4</h2>
-        <textarea id="textarea_46" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17221721799585649384/index_3.m3u8  Sectors of Indian Economy - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_46')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_47').style.display='flex'">Sectors of Indian Economy - 3.mp4</button>
-
-<div class="modal" id="modal_47">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_47').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 3.mp4</h2>
-        <textarea id="textarea_47" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17222586425782649384/index_3.m3u8  Sectors of Indian Economy - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_47')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_48').style.display='flex'">Sectors of Indian Economy - 4.mp4</button>
-
-<div class="modal" id="modal_48">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_48').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 4.mp4</h2>
-        <textarea id="textarea_48" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17223553931198649384/index_3.m3u8  Sectors of Indian Economy - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_48')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_49').style.display='flex'">Sectors of Indian Economy - 5.mp4</button>
-
-<div class="modal" id="modal_49">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_49').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 5.mp4</h2>
-        <textarea id="textarea_49" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17225270037284649384/index_3.m3u8  Sectors of Indian Economy - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_49')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_50').style.display='flex'">Sectors of Indian Economy - 6.mp4</button>
-
-<div class="modal" id="modal_50">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_50').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 6.mp4</h2>
-        <textarea id="textarea_50" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17226126118710649384/index_3.m3u8  Sectors of Indian Economy - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_50')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_51').style.display='flex'">Sectors of Indian Economy - 7.mp4</button>
-
-<div class="modal" id="modal_51">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_51').style.display='none'">&times;</span>
-        <h2>Sectors of Indian Economy - 7.mp4</h2>
-        <textarea id="textarea_51" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17226911011907649384/index_3.m3u8  Sectors of Indian Economy - 7.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_51')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_52').style.display='flex'">Gender Religion and Caste - 1.mp4</button>
-
-<div class="modal" id="modal_52">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_52').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 1.mp4</h2>
-        <textarea id="textarea_52" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17232087402271649384/index_3.m3u8  Gender Religion and Caste - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_52')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_53').style.display='flex'">Gender Religion and Caste - 2.mp4</button>
-
-<div class="modal" id="modal_53">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_53').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 2.mp4</h2>
-        <textarea id="textarea_53" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17232957999372649384/index_3.m3u8  Gender Religion and Caste - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_53')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_54').style.display='flex'">Gender Religion and Caste - 3.mp4</button>
-
-<div class="modal" id="modal_54">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_54').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 3.mp4</h2>
-        <textarea id="textarea_54" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17233823175257649384/index_3.m3u8  Gender Religion and Caste - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_54')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_55').style.display='flex'">Gender Religion and Caste - 4.mp4</button>
-
-<div class="modal" id="modal_55">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_55').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 4.mp4</h2>
-        <textarea id="textarea_55" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17234683236558649384/index_3.m3u8  Gender Religion and Caste - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_55')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_56').style.display='flex'">Gender Religion and Caste - 5.mp4</button>
-
-<div class="modal" id="modal_56">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_56').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 5.mp4</h2>
-        <textarea id="textarea_56" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17239107041300649384/index_3.m3u8  Gender Religion and Caste - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_56')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_57').style.display='flex'">Gender Religion and Caste - 6.mp4</button>
-
-<div class="modal" id="modal_57">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_57').style.display='none'">&times;</span>
-        <h2>Gender Religion and Caste - 6.mp4</h2>
-        <textarea id="textarea_57" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17239971515225649384/index_3.m3u8  Gender Religion and Caste - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_57')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_58').style.display='flex'">Water Resources - 1.mp4</button>
-
-<div class="modal" id="modal_58">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_58').style.display='none'">&times;</span>
-        <h2>Water Resources - 1.mp4</h2>
-        <textarea id="textarea_58" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17244183951783649384/index_3.m3u8  Water Resources - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_58')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_59').style.display='flex'">Water Resources - 2.mp4</button>
-
-<div class="modal" id="modal_59">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_59').style.display='none'">&times;</span>
-        <h2>Water Resources - 2.mp4</h2>
-        <textarea id="textarea_59" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17245140267892649384/index_3.m3u8  Water Resources - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_59')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_60').style.display='flex'">Water Resources - 3.mp4</button>
-
-<div class="modal" id="modal_60">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_60').style.display='none'">&times;</span>
-        <h2>Water Resources - 3.mp4</h2>
-        <textarea id="textarea_60" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17246012877694649384/index_3.m3u8  Water Resources - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_60')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_61').style.display='flex'">Water Resources - 4.mp4</button>
-
-<div class="modal" id="modal_61">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_61').style.display='none'">&times;</span>
-        <h2>Water Resources - 4.mp4</h2>
-        <textarea id="textarea_61" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17246770419493649384/index_3.m3u8  Water Resources - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_61')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_62').style.display='flex'">The Making of Global World - 1.mp4</button>
-
-<div class="modal" id="modal_62">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_62').style.display='none'">&times;</span>
-        <h2>The Making of Global World - 1.mp4</h2>
-        <textarea id="textarea_62" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17251204702229649384/index_3.m3u8  The Making of Global World - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_62')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_63').style.display='flex'">Money and Credit - 1.mp4</button>
-
-<div class="modal" id="modal_63">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_63').style.display='none'">&times;</span>
-        <h2>Money and Credit - 1.mp4</h2>
-        <textarea id="textarea_63" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17252065848999649384/index_3.m3u8  Money and Credit - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_63')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_64').style.display='flex'">Money and Credit - 2.mp4</button>
-
-<div class="modal" id="modal_64">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_64').style.display='none'">&times;</span>
-        <h2>Money and Credit - 2.mp4</h2>
-        <textarea id="textarea_64" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17252822286960649384/index_3.m3u8  Money and Credit - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_64')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_65').style.display='flex'">Money and Credit - 3.mp4</button>
-
-<div class="modal" id="modal_65">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_65').style.display='none'">&times;</span>
-        <h2>Money and Credit - 3.mp4</h2>
-        <textarea id="textarea_65" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17256277955602649384/index_3.m3u8  Money and Credit - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_65')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_66').style.display='flex'">Money and Credit - 4.mp4</button>
-
-<div class="modal" id="modal_66">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_66').style.display='none'">&times;</span>
-        <h2>Money and Credit - 4.mp4</h2>
-        <textarea id="textarea_66" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17258111905537649384/index_3.m3u8  Money and Credit - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_66')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_67').style.display='flex'">Money and Credit L - 5.mp4</button>
-
-<div class="modal" id="modal_67">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_67').style.display='none'">&times;</span>
-        <h2>Money and Credit L - 5.mp4</h2>
-        <textarea id="textarea_67" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17258871495429649384/index_3.m3u8  Money and Credit L - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_67')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_68').style.display='flex'">Agriculture - 1.mp4</button>
-
-<div class="modal" id="modal_68">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_68').style.display='none'">&times;</span>
-        <h2>Agriculture - 1.mp4</h2>
-        <textarea id="textarea_68" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17262317223529649384/index_3.m3u8  Agriculture - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_68')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_69').style.display='flex'">Agriculture - 2.mp4</button>
-
-<div class="modal" id="modal_69">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_69').style.display='none'">&times;</span>
-        <h2>Agriculture - 2.mp4</h2>
-        <textarea id="textarea_69" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17263190565284649384/index_3.m3u8  Agriculture - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_69')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_70').style.display='flex'">Agriculture - 3.mp4</button>
-
-<div class="modal" id="modal_70">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_70').style.display='none'">&times;</span>
-        <h2>Agriculture - 3.mp4</h2>
-        <textarea id="textarea_70" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17264049976491649384/index_3.m3u8  Agriculture - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_70')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_71').style.display='flex'">Agriculture - 4.mp4</button>
-
-<div class="modal" id="modal_71">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_71').style.display='none'">&times;</span>
-        <h2>Agriculture - 4.mp4</h2>
-        <textarea id="textarea_71" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17264905481856649384/index_3.m3u8  Agriculture - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_71')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_72').style.display='flex'">Political Parties - 1.mp4</button>
-
-<div class="modal" id="modal_72">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_72').style.display='none'">&times;</span>
-        <h2>Political Parties - 1.mp4</h2>
-        <textarea id="textarea_72" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17269348145919649384/index_3.m3u8  Political Parties - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_72')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_73').style.display='flex'">Political Parties - 2.mp4</button>
-
-<div class="modal" id="modal_73">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_73').style.display='none'">&times;</span>
-        <h2>Political Parties - 2.mp4</h2>
-        <textarea id="textarea_73" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17270199593509649384/index_3.m3u8  Political Parties - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_73')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_74').style.display='flex'">Political Parties - 3.mp4</button>
-
-<div class="modal" id="modal_74">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_74').style.display='none'">&times;</span>
-        <h2>Political Parties - 3.mp4</h2>
-        <textarea id="textarea_74" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17270965213441649384/index_3.m3u8  Political Parties - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_74')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_75').style.display='flex'">Political Parties - 4.mp4</button>
-
-<div class="modal" id="modal_75">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_75').style.display='none'">&times;</span>
-        <h2>Political Parties - 4.mp4</h2>
-        <textarea id="textarea_75" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17271929548836649384/index_3.m3u8  Political Parties - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_75')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_76').style.display='flex'">Political Parties - 5.mp4</button>
-
-<div class="modal" id="modal_76">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_76').style.display='none'">&times;</span>
-        <h2>Political Parties - 5.mp4</h2>
-        <textarea id="textarea_76" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172727990433611815381/index_3.m3u8  Political Parties - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_76')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_77').style.display='flex'">Political Parties - 6 & Doubt Solving Class.mp4</button>
-
-<div class="modal" id="modal_77">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_77').style.display='none'">&times;</span>
-        <h2>Political Parties - 6 & Doubt Solving Class.mp4</h2>
-        <textarea id="textarea_77" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172788457975011815381/index_3.m3u8  Political Parties - 6 & Doubt Solving Class.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_77')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_78').style.display='flex'">Globalization And The Indian Economy -1.mp4</button>
-
-<div class="modal" id="modal_78">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_78').style.display='none'">&times;</span>
-        <h2>Globalization And The Indian Economy -1.mp4</h2>
-        <textarea id="textarea_78" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172796094871731815381/index_3.m3u8  Globalization And The Indian Economy -1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_78')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_79').style.display='flex'">Minerals and Energy Resources - 1.mp4</button>
-
-<div class="modal" id="modal_79">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_79').style.display='none'">&times;</span>
-        <h2>Minerals and Energy Resources - 1.mp4</h2>
-        <textarea id="textarea_79" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172804666393971815381/index_3.m3u8  Minerals and Energy Resources - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_79')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_80').style.display='flex'">Minerals and Energy Resources - 2.mp4</button>
-
-<div class="modal" id="modal_80">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_80').style.display='none'">&times;</span>
-        <h2>Minerals and Energy Resources - 2.mp4</h2>
-        <textarea id="textarea_80" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172805664351241815381/index_3.m3u8  Minerals and Energy Resources - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_80')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_81').style.display='flex'">Minerals and Energy Resources - 3.mp4</button>
-
-<div class="modal" id="modal_81">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_81').style.display='none'">&times;</span>
-        <h2>Minerals and Energy Resources - 3.mp4</h2>
-        <textarea id="textarea_81" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172832094678541815381/index_3.m3u8  Minerals and Energy Resources - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_81')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_82').style.display='flex'">Minerals and Energy Resources - 4.mp4</button>
-
-<div class="modal" id="modal_82">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_82').style.display='none'">&times;</span>
-        <h2>Minerals and Energy Resources - 4.mp4</h2>
-        <textarea id="textarea_82" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172821876985661815381/index_3.m3u8  Minerals and Energy Resources - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_82')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_83').style.display='flex'">Minerals and Energy Resources - 5.mp4</button>
-
-<div class="modal" id="modal_83">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_83').style.display='none'">&times;</span>
-        <h2>Minerals and Energy Resources - 5.mp4</h2>
-        <textarea id="textarea_83" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172832045681981815381/index_3.m3u8  Minerals and Energy Resources - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_83')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_84').style.display='flex'">Outcomes of Democracy 1.mp4</button>
-
-<div class="modal" id="modal_84">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_84').style.display='none'">&times;</span>
-        <h2>Outcomes of Democracy 1.mp4</h2>
-        <textarea id="textarea_84" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172873373174521815381/index_3.m3u8  Outcomes of Democracy 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_84')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_85').style.display='flex'">Outcomes of Democracy 2.mp4</button>
-
-<div class="modal" id="modal_85">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_85').style.display='none'">&times;</span>
-        <h2>Outcomes of Democracy 2.mp4</h2>
-        <textarea id="textarea_85" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172891054119991815381/index_3.m3u8  Outcomes of Democracy 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_85')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_86').style.display='flex'">Outcomes of Democracy 3.mp4</button>
-
-<div class="modal" id="modal_86">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_86').style.display='none'">&times;</span>
-        <h2>Outcomes of Democracy 3.mp4</h2>
-        <textarea id="textarea_86" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172909383696221815381/index_3.m3u8  Outcomes of Democracy 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_86')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_87').style.display='flex'">Outcomes of Democracy 4.mp4</button>
-
-<div class="modal" id="modal_87">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_87').style.display='none'">&times;</span>
-        <h2>Outcomes of Democracy 4.mp4</h2>
-        <textarea id="textarea_87" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172925641547591815381/index_3.m3u8  Outcomes of Democracy 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_87')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_88').style.display='flex'">Manufacturing Industries - 1.mp4</button>
-
-<div class="modal" id="modal_88">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_88').style.display='none'">&times;</span>
-        <h2>Manufacturing Industries - 1.mp4</h2>
-        <textarea id="textarea_88" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172934281316761815381/index_3.m3u8  Manufacturing Industries - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_88')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_89').style.display='flex'">Manufacturing Industries - 2.mp4</button>
-
-<div class="modal" id="modal_89">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_89').style.display='none'">&times;</span>
-        <h2>Manufacturing Industries - 2.mp4</h2>
-        <textarea id="textarea_89" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172935274991431815381/index_3.m3u8  Manufacturing Industries - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_89')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_90').style.display='flex'">Manufacturing Industries - 3.mp4</button>
-
-<div class="modal" id="modal_90">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_90').style.display='none'">&times;</span>
-        <h2>Manufacturing Industries - 3.mp4</h2>
-        <textarea id="textarea_90" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172951462132511815381/index_3.m3u8  Manufacturing Industries - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_90')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_91').style.display='flex'">Manufacturing Industries - 4.mp4</button>
-
-<div class="modal" id="modal_91">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_91').style.display='none'">&times;</span>
-        <h2>Manufacturing Industries - 4.mp4</h2>
-        <textarea id="textarea_91" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172952541058421815381/index_3.m3u8  Manufacturing Industries - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_91')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_92').style.display='flex'">Manufacturing Industries - 5 & Doubt Solving Class.mp4</button>
-
-<div class="modal" id="modal_92">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_92').style.display='none'">&times;</span>
-        <h2>Manufacturing Industries - 5 & Doubt Solving Class.mp4</h2>
-        <textarea id="textarea_92" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172960263482521815381/index_3.m3u8  Manufacturing Industries - 5 & Doubt Solving Class.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_92')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_93').style.display='flex'">Print Culture and The Modern World - 1.mp4</button>
-
-<div class="modal" id="modal_93">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_93').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 1.mp4</h2>
-        <textarea id="textarea_93" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172968874616261815381/index_3.m3u8  Print Culture and The Modern World - 1.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_93')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_94').style.display='flex'">Print Culture and The Modern World - 2.mp4</button>
-
-<div class="modal" id="modal_94">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_94').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 2.mp4</h2>
-        <textarea id="textarea_94" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172977455641771815381/index_3.m3u8  Print Culture and The Modern World - 2.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_94')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_95').style.display='flex'">Print Culture and The Modern World - 3.mp4</button>
-
-<div class="modal" id="modal_95">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_95').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 3.mp4</h2>
-        <textarea id="textarea_95" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172986146924881815381/index_3.m3u8  Print Culture and The Modern World - 3.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_95')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_96').style.display='flex'">Print Culture and The Modern World - 4.mp4</button>
-
-<div class="modal" id="modal_96">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_96').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 4.mp4</h2>
-        <textarea id="textarea_96" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172994254576221815381/index_3.m3u8  Print Culture and The Modern World - 4.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_96')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_97').style.display='flex'">Print Culture and The Modern World - 5.mp4</button>
-
-<div class="modal" id="modal_97">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_97').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 5.mp4</h2>
-        <textarea id="textarea_97" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173012053720581815381/index_3.m3u8  Print Culture and The Modern World - 5.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_97')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_98').style.display='flex'">Print Culture and The Modern World - 6.mp4</button>
-
-<div class="modal" id="modal_98">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_98').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 6.mp4</h2>
-        <textarea id="textarea_98" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173020705778561815381/index_3.m3u8  Print Culture and The Modern World - 6.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_98')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_99').style.display='flex'">Print Culture and The Modern World - 7.mp4</button>
-
-<div class="modal" id="modal_99">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_99').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 7.mp4</h2>
-        <textarea id="textarea_99" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173030322681651815381/index_3.m3u8  Print Culture and The Modern World - 7.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_99')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_100').style.display='flex'">Print Culture and The Modern World - 8.mp4</button>
-
-<div class="modal" id="modal_100">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_100').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 8.mp4</h2>
-        <textarea id="textarea_100" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173072459434381815381/index_3.m3u8  Print Culture and The Modern World - 8.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_100')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_101').style.display='flex'">Print Culture and The Modern World - 9 & Doubt Solving Class.mp4</button>
-
-<div class="modal" id="modal_101">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_101').style.display='none'">&times;</span>
-        <h2>Print Culture and The Modern World - 9 & Doubt Solving Class.mp4</h2>
-        <textarea id="textarea_101" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173082175059551815381/index_3.m3u8  Print Culture and The Modern World - 9 & Doubt Solving Class.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_101')">Copy</button>
-    </div>
-</div>
-<button onclick="document.getElementById('modal_102').style.display='flex'">Map Work.mp4</button>
-
-<div class="modal" id="modal_102">
-    <div class="modal-content">
-        <span class="close-btn" onclick="document.getElementById('modal_102').style.display='none'">&times;</span>
-        <h2>Map Work.mp4</h2>
-        <textarea id="textarea_102" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173089759353101815381/index_3.m3u8  Map Work.mp4</textarea>
-        <br><br>
-        <button onclick="copyToClipboard('textarea_102')">Copy</button>
-    </div>
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173107155697101815381/index_3.m3u8  Doubt Solving Class.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_6')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_7').style.display='block'">The Rise of Nationalism in Europe</button>
+<div id="modal_7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_7').style.display='none'">&times;</span>
+    <h2>The Rise of Nationalism in Europe</h2>
+    <textarea id="textarea_7" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17153595915108649384/index_3.m3u8  The Rise of Nationalism in Europe - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17154424674251649384/index_3.m3u8  The Rise of Nationalism in Europe - 6.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17155275125960649384/index_3.m3u8  The Rise of Nationalism in Europe - 7.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_7')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_8').style.display='block'">The Nationalism in Europe</button>
+<div id="modal_8" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_8').style.display='none'">&times;</span>
+    <h2>The Nationalism in Europe</h2>
+    <textarea id="textarea_8" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17160380281113649384/index_3.m3u8  The Nationalism in Europe - 8.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_8')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_9').style.display='block'">The Rise of Nationalism In Europe</button>
+<div id="modal_9" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_9').style.display='none'">&times;</span>
+    <h2>The Rise of Nationalism In Europe</h2>
+    <textarea id="textarea_9" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17161334644454649384/index_3.m3u8  The Rise of Nationalism In Europe - 9.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17162108314730649384/index_3.m3u8  The Rise of Nationalism In Europe - 10.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_9')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_10').style.display='block'">Development</button>
+<div id="modal_10" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_10').style.display='none'">&times;</span>
+    <h2>Development</h2>
+    <textarea id="textarea_10" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17166516995920649384/index_3.m3u8  Development - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17167382266300649384/index_3.m3u8  Development - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17168153633966649384/index_3.m3u8  Development - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17180340074292649384/index_3.m3u8  Development - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_10')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_11').style.display='block'">Federalism</button>
+<div id="modal_11" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_11').style.display='none'">&times;</span>
+    <h2>Federalism</h2>
+    <textarea id="textarea_11" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17180340074292649384/index_3.m3u8  Federalism - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17181211522469649384/index_3.m3u8  Federalism - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17182064999480649384/index_3.m3u8  Federalism - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17182936795463649384/index_3.m3u8  Federalism - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17189759349261649384/index_3.m3u8  Federalism - 5.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_11')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_12').style.display='block'">SST doubt solving class.mp4</button>
+<div id="modal_12" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_12').style.display='none'">&times;</span>
+    <h2>SST doubt solving class.mp4</h2>
+    <textarea id="textarea_12" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17186293167106649384/index_3.m3u8  SST doubt solving class.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_12')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_13').style.display='block'">Forest and Wildlife Resources</button>
+<div id="modal_13" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_13').style.display='none'">&times;</span>
+    <h2>Forest and Wildlife Resources</h2>
+    <textarea id="textarea_13" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17191570875588649384/index_3.m3u8  Forest and Wildlife Resources - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17192342518384649384/index_3.m3u8  Forest and Wildlife Resources - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17192436195662649384/index_3.m3u8  Forest and Wildlife Resources - 3.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_13')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_14').style.display='block'">Nationalism in India</button>
+<div id="modal_14" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_14').style.display='none'">&times;</span>
+    <h2>Nationalism in India</h2>
+    <textarea id="textarea_14" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17196665905631649384/index_3.m3u8  Nationalism in India - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17199257035351649384/index_3.m3u8  Nationalism in India - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17200219498358649384/index_3.m3u8  Nationalism in India - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17203670994343649384/index_3.m3u8  Nationalism in India - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17207896504953649384/index_3.m3u8  Nationalism in India - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17208759348052649384/index_3.m3u8  Nationalism in India - 6.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17209632394366649384/index_3.m3u8  Nationalism in India - 7.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17210578113221649384/index_3.m3u8  Nationalism in India - 8.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17214899422201649384/index_3.m3u8  Nationalism in India - 9.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_14')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_15').style.display='block'">Nationalism in India -10.mp4</button>
+<div id="modal_15" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_15').style.display='none'">&times;</span>
+    <h2>Nationalism in India -10.mp4</h2>
+    <textarea id="textarea_15" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17215762347214649384/index_3.m3u8  Nationalism in India -10.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_15')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_16').style.display='block'">Nationalism in India -11.mp4</button>
+<div id="modal_16" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_16').style.display='none'">&times;</span>
+    <h2>Nationalism in India -11.mp4</h2>
+    <textarea id="textarea_16" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17216543628282649384/index_3.m3u8  Nationalism in India -11.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_16')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_17').style.display='block'">Sectors of Indian Economy -1.mp4</button>
+<div id="modal_17" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_17').style.display='none'">&times;</span>
+    <h2>Sectors of Indian Economy -1.mp4</h2>
+    <textarea id="textarea_17" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17219994483478649384/index_3.m3u8  Sectors of Indian Economy -1.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_17')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_18').style.display='block'">Sectors of Indian Economy</button>
+<div id="modal_18" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_18').style.display='none'">&times;</span>
+    <h2>Sectors of Indian Economy</h2>
+    <textarea id="textarea_18" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17221721799585649384/index_3.m3u8  Sectors of Indian Economy - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17222586425782649384/index_3.m3u8  Sectors of Indian Economy - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17223553931198649384/index_3.m3u8  Sectors of Indian Economy - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17225270037284649384/index_3.m3u8  Sectors of Indian Economy - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17226126118710649384/index_3.m3u8  Sectors of Indian Economy - 6.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17226911011907649384/index_3.m3u8  Sectors of Indian Economy - 7.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_18')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_19').style.display='block'">Gender Religion and Caste</button>
+<div id="modal_19" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_19').style.display='none'">&times;</span>
+    <h2>Gender Religion and Caste</h2>
+    <textarea id="textarea_19" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17232087402271649384/index_3.m3u8  Gender Religion and Caste - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17232957999372649384/index_3.m3u8  Gender Religion and Caste - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17233823175257649384/index_3.m3u8  Gender Religion and Caste - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17234683236558649384/index_3.m3u8  Gender Religion and Caste - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17239107041300649384/index_3.m3u8  Gender Religion and Caste - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17239971515225649384/index_3.m3u8  Gender Religion and Caste - 6.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_19')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_20').style.display='block'">Water Resources</button>
+<div id="modal_20" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_20').style.display='none'">&times;</span>
+    <h2>Water Resources</h2>
+    <textarea id="textarea_20" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17244183951783649384/index_3.m3u8  Water Resources - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17245140267892649384/index_3.m3u8  Water Resources - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17246012877694649384/index_3.m3u8  Water Resources - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17246770419493649384/index_3.m3u8  Water Resources - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_20')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_21').style.display='block'">The Making of Global World</button>
+<div id="modal_21" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_21').style.display='none'">&times;</span>
+    <h2>The Making of Global World</h2>
+    <textarea id="textarea_21" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17251204702229649384/index_3.m3u8  The Making of Global World - 1.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_21')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_22').style.display='block'">Money and Credit</button>
+<div id="modal_22" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_22').style.display='none'">&times;</span>
+    <h2>Money and Credit</h2>
+    <textarea id="textarea_22" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17252065848999649384/index_3.m3u8  Money and Credit - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17252822286960649384/index_3.m3u8  Money and Credit - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17256277955602649384/index_3.m3u8  Money and Credit - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17258111905537649384/index_3.m3u8  Money and Credit - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_22')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_23').style.display='block'">Money and Credit L</button>
+<div id="modal_23" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_23').style.display='none'">&times;</span>
+    <h2>Money and Credit L</h2>
+    <textarea id="textarea_23" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17258871495429649384/index_3.m3u8  Money and Credit L - 5.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_23')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_24').style.display='block'">Agriculture</button>
+<div id="modal_24" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_24').style.display='none'">&times;</span>
+    <h2>Agriculture</h2>
+    <textarea id="textarea_24" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17262317223529649384/index_3.m3u8  Agriculture - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17263190565284649384/index_3.m3u8  Agriculture - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17264049976491649384/index_3.m3u8  Agriculture - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17264905481856649384/index_3.m3u8  Agriculture - 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_24')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_25').style.display='block'">Political Parties</button>
+<div id="modal_25" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_25').style.display='none'">&times;</span>
+    <h2>Political Parties</h2>
+    <textarea id="textarea_25" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17269348145919649384/index_3.m3u8  Political Parties - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17270199593509649384/index_3.m3u8  Political Parties - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17270965213441649384/index_3.m3u8  Political Parties - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/17271929548836649384/index_3.m3u8  Political Parties - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172727990433611815381/index_3.m3u8  Political Parties - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172788457975011815381/index_3.m3u8  Political Parties - 6 & Doubt Solving Class.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_25')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_26').style.display='block'">Globalization And The Indian Economy -1.mp4</button>
+<div id="modal_26" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_26').style.display='none'">&times;</span>
+    <h2>Globalization And The Indian Economy -1.mp4</h2>
+    <textarea id="textarea_26" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172796094871731815381/index_3.m3u8  Globalization And The Indian Economy -1.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_26')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_27').style.display='block'">Minerals and Energy Resources</button>
+<div id="modal_27" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_27').style.display='none'">&times;</span>
+    <h2>Minerals and Energy Resources</h2>
+    <textarea id="textarea_27" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172804666393971815381/index_3.m3u8  Minerals and Energy Resources - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172805664351241815381/index_3.m3u8  Minerals and Energy Resources - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172832094678541815381/index_3.m3u8  Minerals and Energy Resources - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172821876985661815381/index_3.m3u8  Minerals and Energy Resources - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172832045681981815381/index_3.m3u8  Minerals and Energy Resources - 5.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_27')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_28').style.display='block'">Outcomes of Democracy 1.mp4</button>
+<div id="modal_28" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_28').style.display='none'">&times;</span>
+    <h2>Outcomes of Democracy 1.mp4</h2>
+    <textarea id="textarea_28" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172873373174521815381/index_3.m3u8  Outcomes of Democracy 1.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_28')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_29').style.display='block'">Outcomes of Democracy 2.mp4</button>
+<div id="modal_29" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_29').style.display='none'">&times;</span>
+    <h2>Outcomes of Democracy 2.mp4</h2>
+    <textarea id="textarea_29" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172891054119991815381/index_3.m3u8  Outcomes of Democracy 2.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_29')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_30').style.display='block'">Outcomes of Democracy 3.mp4</button>
+<div id="modal_30" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_30').style.display='none'">&times;</span>
+    <h2>Outcomes of Democracy 3.mp4</h2>
+    <textarea id="textarea_30" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172909383696221815381/index_3.m3u8  Outcomes of Democracy 3.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_30')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_31').style.display='block'">Outcomes of Democracy 4.mp4</button>
+<div id="modal_31" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_31').style.display='none'">&times;</span>
+    <h2>Outcomes of Democracy 4.mp4</h2>
+    <textarea id="textarea_31" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172925641547591815381/index_3.m3u8  Outcomes of Democracy 4.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_31')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_32').style.display='block'">Manufacturing Industries</button>
+<div id="modal_32" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_32').style.display='none'">&times;</span>
+    <h2>Manufacturing Industries</h2>
+    <textarea id="textarea_32" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172934281316761815381/index_3.m3u8  Manufacturing Industries - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172935274991431815381/index_3.m3u8  Manufacturing Industries - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172951462132511815381/index_3.m3u8  Manufacturing Industries - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172952541058421815381/index_3.m3u8  Manufacturing Industries - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172960263482521815381/index_3.m3u8  Manufacturing Industries - 5 & Doubt Solving Class.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_32')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_33').style.display='block'">Print Culture and The Modern World</button>
+<div id="modal_33" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_33').style.display='none'">&times;</span>
+    <h2>Print Culture and The Modern World</h2>
+    <textarea id="textarea_33" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172968874616261815381/index_3.m3u8  Print Culture and The Modern World - 1.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172977455641771815381/index_3.m3u8  Print Culture and The Modern World - 2.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172986146924881815381/index_3.m3u8  Print Culture and The Modern World - 3.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/172994254576221815381/index_3.m3u8  Print Culture and The Modern World - 4.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173012053720581815381/index_3.m3u8  Print Culture and The Modern World - 5.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173020705778561815381/index_3.m3u8  Print Culture and The Modern World - 6.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173030322681651815381/index_3.m3u8  Print Culture and The Modern World - 7.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173072459434381815381/index_3.m3u8  Print Culture and The Modern World - 8.mp4
+https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173082175059551815381/index_3.m3u8  Print Culture and The Modern World - 9 & Doubt Solving Class.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_33')">Copy</button>
+  </div>
+</div>
+
+<button onclick="document.getElementById('modal_34').style.display='block'">Map Work.mp4</button>
+<div id="modal_34" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal_34').style.display='none'">&times;</span>
+    <h2>Map Work.mp4</h2>
+    <textarea id="textarea_34" readonly>https://d1qcficr3lu37x.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/173089759353101815381/index_3.m3u8  Map Work.mp4</textarea><br>
+    <button onclick="copyToClipboard('textarea_34')">Copy</button>
+  </div>
 </div>
 
 <script>
